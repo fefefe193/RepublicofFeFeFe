@@ -1,13 +1,283 @@
-<h2>Chapter 4: Administrators</h2>
-<p><strong>Article 23:</strong> Administrators of the community shall be elected by vote, with a maximum of three administrators.</p>
-<p><strong>Article 24:</strong> Those who have participated in the community for one week may stand for the position of administrator.</p>
-<p><strong>Article 25:</strong> If no candidates stand for election, no further elections shall be held until the next election period.</p>
-<p><strong>Article 26:</strong> Elected administrators must belong to a specific group, which is recognized as the government.</p>
-<p><strong>Article 27:</strong> Elected administrators are not permitted to make decisions independently. All decisions must be made in consultation with the government.</p>
-<p><strong>Article 28:</strong> The leakage of government information to external parties is prohibited.</p>
-<p><strong>Article 29:</strong> The founders of the community shall not directly delegate the authority of the community to the elected administrator. The administrator and the founder must consult with each other, and the implementation of the results of these consultations must also be carried out by the founders.</p>
-<p><strong>Article 30:</strong> Founders of the community are prohibited from exercising dictatorship.</p>
-<p><strong>Article 31:</strong> After a one-month term, government members, excluding founders, must resign.</p>
-<p><strong>Article 32:</strong> Government members, like all citizens, are entitled to the same rights and are subject to the same obligations as citizens. Thus, government members are equally subject to penalties as citizens and must endure the same punishments.</p>
-<p><strong>Article 33:</strong> Regarding administrators who violate the rules, the community founders shall have the authority to impose warnings and penalties without requiring the permission of the national government.</p>
-<p><strong>Article 34:</strong> Citizens have the right to raise objections to this text if they disagree.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 4: Administrators - Constitution of Fefefe</title>
+    <style>
+        body {
+            background-color: #000080;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+            padding: 20px;
+            color: #fff;
+            background-image: url('/api/placeholder/50/50');
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(32,0,64,0.9), rgba(64,0,64,0.9));
+            border: 5px ridge #c0c0c0;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(255,255,255,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff80ff;
+            font-size: 32px;
+            text-shadow: 2px 2px #400040,
+                         -2px -2px #800080;
+            border-bottom: 3px double #ff00ff;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 2px 2px #400040, -2px -2px #800080; }
+            50% { text-shadow: 2px 2px #400040, -2px -2px #800080, 0 0 20px #ff80ff; }
+        }
+
+        .quick-nav {
+            background: rgba(64,0,64,0.6);
+            padding: 15px;
+            border: 2px outset #ff80ff;
+            margin-bottom: 20px;
+        }
+
+        .quick-nav h3 {
+            color: #ff80ff;
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .quick-nav ul {
+            list-style-type: none;
+            padding: 0;
+            column-count: 2;
+        }
+
+        .quick-nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 0.9em;
+            display: block;
+            padding: 3px 0;
+        }
+
+        .quick-nav a:hover {
+            color: #ff80ff;
+        }
+
+        .article {
+            background: rgba(32,0,32,0.6);
+            margin: 15px 0;
+            padding: 15px;
+            border: 2px outset #800080;
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .article:hover {
+            transform: scale(1.02);
+            background: rgba(48,0,48,0.8);
+            border-color: #ff80ff;
+        }
+
+        .article::before {
+            content: "§";
+            position: absolute;
+            left: -20px;
+            color: #ff80ff;
+            font-size: 1.2em;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .article:hover::before {
+            opacity: 1;
+        }
+
+        strong {
+            color: #ff80ff;
+            font-size: 1.2em;
+            text-shadow: 1px 1px #400040;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 10px 0;
+            color: #fff;
+            text-shadow: 1px 1px #000;
+        }
+
+        .navigation {
+            text-align: center;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #800080, #400040);
+            color: white;
+            text-decoration: none;
+            border: 3px outset #c080c0;
+            margin: 0 10px;
+            font-weight: bold;
+            text-shadow: 1px 1px #000;
+        }
+
+        .nav-button:hover {
+            background: linear-gradient(45deg, #400040, #800080);
+            border-style: inset;
+        }
+
+        marquee {
+            color: #ff80ff;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff80ff; }
+            50% { color: #c0c0ff; }
+            100% { color: #ff80ff; }
+        }
+
+        .rainbow-text {
+            animation: rainbow 3s infinite;
+        }
+
+        .counter {
+            text-align: center;
+            margin-top: 20px;
+            font-family: monospace;
+            background: #200020;
+            color: #ff80ff;
+            display: inline-block;
+            padding: 5px 10px;
+            border: 2px inset #800080;
+        }
+
+        .official-seal {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 48px;
+            color: #ff80ff;
+            text-shadow: 0 0 10px #ff80ff;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="chapter-container">
+        <marquee class="rainbow-text" scrollamount="5">★☆★ Chapter 4: Administrators - Official Constitution of Fefefe Republic ★☆★</marquee>
+        
+        <div class="navigation">
+            <a href="chapter2.html" class="nav-button">⇦ Chapter 2</a>
+            <a href="index.html" class="nav-button">Index</a>
+        </div>
+
+        <h2>Chapter 4: Administrators</h2>
+
+        <div class="quick-nav">
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#article23">Article 23: Election of Administrators</a></li>
+                <li><a href="#article24">Article 24: Eligibility</a></li>
+                <li><a href="#article25">Article 25: Election Process</a></li>
+                <li><a href="#article26">Article 26: Government Membership</a></li>
+                <li><a href="#article27">Article 27: Decision Making</a></li>
+                <li><a href="#article28">Article 28: Information Security</a></li>
+                <li><a href="#article29">Article 29: Authority Delegation</a></li>
+                <li><a href="#article30">Article 30: Founder Limitations</a></li>
+                <li><a href="#article31">Article 31: Term Limits</a></li>
+                <li><a href="#article32">Article 32: Equal Rights</a></li>
+                <li><a href="#article33">Article 33: Rule Enforcement</a></li>
+                <li><a href="#article34">Article 34: Right to Object</a></li>
+            </ul>
+        </div>
+        
+        <div id="article23" class="article">
+            <strong>Article 23:</strong>
+            <p>Administrators of the community shall be elected by vote, with a maximum of three administrators.</p>
+        </div>
+
+        <div id="article24" class="article">
+            <strong>Article 24:</strong>
+            <p>Those who have participated in the community for one week may stand for the position of administrator.</p>
+        </div>
+
+        <div id="article25" class="article">
+            <strong>Article 25:</strong>
+            <p>If no candidates stand for election, no further elections shall be held until the next election period.</p>
+        </div>
+
+        <div id="article26" class="article">
+            <strong>Article 26:</strong>
+            <p>Elected administrators must belong to a specific group, which is recognized as the government.</p>
+        </div>
+
+        <div id="article27" class="article">
+            <strong>Article 27:</strong>
+            <p>Elected administrators are not permitted to make decisions independently. All decisions must be made in consultation with the government.</p>
+        </div>
+
+        <div id="article28" class="article">
+            <strong>Article 28:</strong>
+            <p>The leakage of government information to external parties is prohibited.</p>
+        </div>
+
+        <div id="article29" class="article">
+            <strong>Article 29:</strong>
+            <p>The founders of the community shall not directly delegate the authority of the community to the elected administrator. The administrator and the founder must consult with each other, and the implementation of the results of these consultations must also be carried out by the founders.</p>
+        </div>
+
+        <div id="article30" class="article">
+            <strong>Article 30:</strong>
+            <p>Founders of the community are prohibited from exercising dictatorship.</p>
+        </div>
+
+        <div id="article31" class="article">
+            <strong>Article 31:</strong>
+            <p>After a one-month term, government members, excluding founders, must resign.</p>
+        </div>
+
+        <div id="article32" class="article">
+            <strong>Article 32:</strong>
+            <p>Government members, like all citizens, are entitled to the same rights and are subject to the same obligations as citizens. Thus, government members are equally subject to penalties as citizens and must endure the same punishments.</p>
+        </div>
+
+        <div id="article33" class="article">
+            <strong>Article 33:</strong>
+            <p>Regarding administrators who violate the rules, the community founders shall have the authority to impose warnings and penalties without requiring the permission of the national government.</p>
+        </div>
+
+        <div id="article34" class="article">
+            <strong>Article 34:</strong>
+            <p>Citizens have the right to raise objections to this text if they disagree.</p>
+        </div>
+
+        <div class="official-seal">
+            ★
+        </div>
+
+        <div class="navigation">
+            <a href="chapter2.html" class="nav-button">⇦ Chapter 2</a>
+            <a href="index.html" class="nav-button">Index</a>
+        </div>
+
+        <div style="text-align: center;">
+            <div class="counter">Visitors: 000094</div>
+        </div>
+    </div>
+</body>
+</html>
